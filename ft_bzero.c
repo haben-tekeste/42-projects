@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htekeste <htekeste@student.abudhabi42.a    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 08:33:40 by htekeste          #+#    #+#             */
-/*   Updated: 2022/12/26 08:43:06 by htekeste         ###   ########.fr       */
+/*   Updated: 2023/01/08 19:20:23 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (n == 0)
+		return ;
 	while (i < n)
 	{
 		((unsigned char *)s)[i] = 0;

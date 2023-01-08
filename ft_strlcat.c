@@ -3,32 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htekeste <htekeste@student.abudhabi42.a    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:31:06 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/08 13:49:43 by htekeste         ###   ########.fr       */
+/*   Updated: 2023/01/08 17:40:58 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char	*dst, const char	*src, size_t	dstsize)
 {
-	size_t	i;
-	size_t	len;
-	size_t	j;
+	char	*str2;
+	char	*str1;
+	size_t	diff;
+	size_t	dstlen;
 
-	i = 0;
-	len = ft_strlen(dst);
-	j = len;
-	if (dstsize == 0)
-		return (len);
-	while (i < dstsize - 1 && src[i])
+	diff = dstsize;
+	str1 = dst;
+	str2 = (char *)src;
+	while (diff-- && *str1)
+		str1++;
+	dstlen = str1 - dst;
+	diff = dstsize - dstlen;
+	if (diff == 0)
+		return (ft_strlen(src) + dstlen);
+	while (*str2 != '\0')
 	{
-		dst[j] = src[i];
-		j++;
-		i++;
+		if (diff > 1)
+		{
+			*str1++ = *str2;
+			diff--;
+		}
+		str2++;
 	}
-	dst[j] = '\0';
-	return (ft_strlen(dst));
+	*str1 = '\0';
+	return (dstlen + (str2 - src));
 }
