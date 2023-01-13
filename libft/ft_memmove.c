@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htekeste <htekeste@student.abudhabi42.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/24 19:16:56 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/02 16:32:41 by htekeste         ###   ########.fr       */
+/*   Created: 2022/12/26 09:14:45 by htekeste          #+#    #+#             */
+/*   Updated: 2023/01/02 15:47:44 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	while (len > 0)
+	int	i;
+
+	if (!dst && !src)
+		return (NULL);
+	if (dst > src)
 	{
-		*(unsigned char *) b = c;
-		b++;
-		len--;
+		i = (int)len - 1;
+		while (i >= 0)
+		{
+			*(char *)(dst + i) = *(char *)(src + i);
+			i-- ;
+		}
 	}
-	return (b);
+	else
+	{
+		i = 0;
+		while (i < (int)len)
+		{
+			*(char *)(dst + i) = *(char *)(src + i);
+			i++ ;
+		}
+	}
+	return (dst);
 }
-
-// int main()
-// {
-//    char str[50];
-
-//    strcpy(str,"This is string.h library function");
-//    puts(str);
-
-//    ft_memset(str,'$',7);
-//    puts(str);  
-//    return(0);
-// }

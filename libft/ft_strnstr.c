@@ -15,27 +15,29 @@
 char	*ft_strnstr(const char *haystick, const char *needle, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	needle_size;
+	size_t	haystick_size;
 
 	i = 0;
-	j = 0;
-	if (!needle)
+	if ((needle == haystick)  || (needle[0] == '\0'))
 		return ((char *)haystick);
-	while (needle[i])
-	{
-		while (haystick[j] && j < len)
+	needle_size = ft_strlen(needle);
+	if (len == 0)
+		return (NULL);
+	haystick_size = ft_strlen(haystick);
+	if (len > haystick_size)
+		len = haystick_size;
+    while (haystick[i])
+    {
+		if ((len - i) < needle_size)
+			return (NULL);
+		if (haystick[i] == needle[0])
 		{
-			if (needle[i] == haystick[j])
-			{
-				if (ft_memcmp(&needle[i], &haystick[j], len - j) == 0)
-				{
-					return ((char *)haystick + j);
-				}
-			}
-			j++;
+        	if (ft_strncmp(&haystick[i], needle, needle_size) == 0)
+          		return ((char *)haystick + i);
 		}
 		i++;
-	}
+    }
 	return (NULL);
 }
 

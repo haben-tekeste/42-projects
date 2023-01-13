@@ -1,2 +1,5 @@
-libftTester
+libftTester/
+libft-unit-test/
+libft-war-machine/
 .vscode
+*.o
