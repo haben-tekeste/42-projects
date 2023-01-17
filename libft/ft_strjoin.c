@@ -6,42 +6,36 @@
 /*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 04:42:02 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/17 16:50:02 by htekeste         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:26:55 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	include "libft.h"
 
-char	*ft_cpy(char *s1, char *s2, unsigned int start)
-{
-	size_t	i;
-
-	i = 0;
-	while (s2[i])
-	{
-		s1[i + start] = s2[i];
-		i++;
-	}
-	return (s1);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*str1;
-	char	*str2;
-	char	*str3;
-	size_t	len;
+	char	*ptr;
+	size_t	i;
+	size_t	j;
 
-	if (!s1 || !s2)
+	i = 0;
+	j = 0;
+	if (s1 == NULL || s2 == NULL )
 		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2);
-	str3 = (char *) malloc(len * sizeof(char));
-	str1 = (char *)s1;
-	str2 = (char *)s2;
-	if (!str3)
+	ptr = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (ptr == NULL)
 		return (NULL);
-	str3 = ft_cpy(str3, str1, 0);
-	str3 = ft_cpy(str3, str2, ft_strlen(str1));
-	str3[len] = '\0';
-	return (str3);
+	while (s1[i] != '\0')
+	{
+		ptr[i] = s1[i];
+		i++;
+	}
+	while (s2[j] != '\0')
+	{
+		ptr[i] = s2[j];
+		i++;
+		j++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }

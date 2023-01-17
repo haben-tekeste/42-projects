@@ -6,7 +6,7 @@
 /*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:44:00 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/17 16:44:03 by htekeste         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:07:04 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,23 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del)(void *))
 {
-	struct s_list	*tmp;
+	t_list	*new;
+	t_list	*temp;
 
-	if (!lst || f || del)
+	temp = NULL;
+	new = NULL;
+	if (!f || !del || !lst)
 		return (NULL);
-	tmp = (struct s_list *) malloc(sizeof(struct s_list *));
-	while (lst)
+	while (lst != NULL)
 	{
-		tmp = f(lst -> content);
-		del(lst -> content);
+		temp = ft_lstnew((*f)(lst -> content));
+		if (!temp)
+		{
+			ft_lstclear(&new, del);
+			return (0);
+		}
+		ft_lstadd_back(&new, temp);
 		lst = lst -> next;
 	}
-	free(lst);
-	return (tmp);
+	return (new);
 }
