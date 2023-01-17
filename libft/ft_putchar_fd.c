@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htekeste <htekeste@student.abudhabi42.a    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/02 16:24:49 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/08 11:09:29 by htekeste         ###   ########.fr       */
+/*   Created: 2023/01/17 16:46:46 by htekeste          #+#    #+#             */
+/*   Updated: 2023/01/17 16:46:50 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

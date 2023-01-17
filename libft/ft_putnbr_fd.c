@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htekeste <htekeste@student.abudhabi42.a    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/02 16:25:39 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/08 13:53:51 by htekeste         ###   ########.fr       */
+/*   Created: 2023/01/17 16:47:04 by htekeste          #+#    #+#             */
+/*   Updated: 2023/01/17 16:47:07 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

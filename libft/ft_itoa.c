@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htekeste <htekeste@student.abudhabi42.a    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 16:24:06 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/08 14:46:10 by htekeste         ###   ########.fr       */
+/*   Updated: 2023/01/17 16:39:10 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_count_digits(int n)
 	return (count);
 }
 
-char	*ft_update(char *str,long nb, int index)
+char	*ft_update(char *str, long nb, int index)
 {
 	while (nb > 0)
 	{
@@ -34,7 +34,7 @@ char	*ft_update(char *str,long nb, int index)
 		nb = nb / 10;
 		index--;
 	}
-	return str;
+	return (str);
 }
 
 char	*ft_itoa(int nb)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: habentekeste <habentekeste@student.42.f    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/13 05:13:49 by habentekeste       #+#    #+#             */
-/*   Updated: 2023/01/13 05:13:50 by habentekeste      ###   ########.fr       */
+/*   Created: 2023/01/17 16:43:36 by htekeste          #+#    #+#             */
+/*   Updated: 2023/01/17 16:43:39 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

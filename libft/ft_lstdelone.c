@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: habentekeste <habentekeste@student.42.f    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/13 05:14:20 by habentekest       #+#    #+#             */
-/*   Updated: 2023/01/13 08:17:14 by habentekest      ###   ########.fr       */
+/*   Created: 2023/01/17 16:42:30 by htekeste          #+#    #+#             */
+/*   Updated: 2023/01/17 16:42:53 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstdelone(t_list *lst, void (*del) (void *))
 {
 	if (!lst || !del)
-		return;
-	del( lst-> content);
+		return ;
+	del(lst-> content);
 	free(lst);
 }

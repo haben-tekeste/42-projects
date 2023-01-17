@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: habentekeste <habentekeste@student.42.f    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/13 05:13:37 by habentekeste       #+#    #+#             */
-/*   Updated: 2023/01/13 05:13:38 by habentekeste      ###   ########.fr       */
+/*   Created: 2023/01/17 16:44:56 by htekeste          #+#    #+#             */
+/*   Updated: 2023/01/17 16:45:12 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_lstsize(t_list *lst)
 {
 	struct s_list	*lst_temp;
-	int	count;
+	int				count;
 
 	count = 0;
 	if (!lst)

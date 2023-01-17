@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htekeste <htekeste@student.abudhabi42.a    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/02 16:25:26 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/08 13:53:22 by htekeste         ###   ########.fr       */
+/*   Created: 2023/01/17 16:46:55 by htekeste          #+#    #+#             */
+/*   Updated: 2023/01/17 16:46:58 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

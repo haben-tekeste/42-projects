@@ -3,21 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: htekeste <htekeste@student.abudhabi42.a    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/08 04:43:34 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/08 13:54:47 by htekeste         ###   ########.fr       */
+/*   Created: 2023/01/17 16:47:46 by htekeste          #+#    #+#             */
+/*   Updated: 2023/01/17 16:49:26 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	include "libft.h"
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <string.h>
-
-int	ft_count(const char* s, char c)
+int	ft_count(const char *s, char c)
 {
 	int	i;
 	int	count;
@@ -33,14 +28,14 @@ int	ft_count(const char* s, char c)
 			count++ ;
 		}
 		i++ ;
-    }
+	}
 	return (count);
 }
 
-void  ft_fill_ptr(char **res, char const *str, char c)
+void	ft_fill_ptr(char **res, char const *str, char c)
 {
 	char const	*temp;
- 
+
 	temp = str;
 	while (*str)
 	{
@@ -74,6 +69,6 @@ char	**ft_split(char const *s, char c)
 	result = (char **)malloc((count + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
-	ft_fill_ptr(result,s,c);
+	ft_fill_ptr(result, s, c);
 	return (result);
 }

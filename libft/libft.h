@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: habentekeste <habentekeste@student.42.f    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 13:23:30 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/13 05:24:40 by habentekest      ###   ########.fr       */
+/*   Updated: 2023/01/17 17:06:14 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef	struct s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -24,8 +24,8 @@ typedef	struct s_list
 
 typedef struct s_split_next
 {
-	size_t start;
-	size_t length;
+	size_t	start;
+	size_t	length;
 }				t_split_next;
 
 int				ft_atoi(const char *str);

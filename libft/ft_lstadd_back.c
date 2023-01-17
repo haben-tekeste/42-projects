@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: habentekeste <habentekeste@student.42.f    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/13 05:14:07 by habentekeste       #+#    #+#             */
-/*   Updated: 2023/01/13 05:16:52 by habentekeste      ###   ########.fr       */
+/*   Created: 2023/01/17 16:40:02 by htekeste          #+#    #+#             */
+/*   Updated: 2023/01/17 16:42:10 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	struct s_list	*tmp;
 
 	tmp = ft_lstlast(*lst);
-	if(!new)
-		return;
+	if (!new)
+		return ;
 	if (!*lst)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
 	tmp -> next = new;
 }

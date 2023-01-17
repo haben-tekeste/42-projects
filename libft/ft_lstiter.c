@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: habentekeste <habentekeste@student.42.f    +#+  +:+       +#+        */
+/*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/13 05:14:48 by habentekeste       #+#    #+#             */
-/*   Updated: 2023/01/13 05:14:49 by habentekeste      ###   ########.fr       */
+/*   Created: 2023/01/17 16:43:09 by htekeste          #+#    #+#             */
+/*   Updated: 2023/01/17 16:43:16 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!f)
-		return;
+		return ;
 	while (lst)
 	{
 		f(lst -> content);
