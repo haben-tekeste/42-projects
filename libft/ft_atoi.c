@@ -6,7 +6,7 @@
 /*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:55:52 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/17 17:03:10 by htekeste         ###   ########.fr       */
+/*   Updated: 2023/01/17 20:56:40 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	int		i;
-	long	result;
+	int		result;
 	int		sign;
 
 	i = 0;
@@ -34,9 +34,5 @@ int	ft_atoi(const char *str)
 		result = (result * 10) + (str[i] - '0');
 		i++;
 	}
-	if (result > 2147483647 && sign == 1)
-		return (-1);
-	else if (result - 1 > 2147483647 && sign == -1)
-		return (0);
-	return ((int) sign * result);
+	return (sign * result);
 }
