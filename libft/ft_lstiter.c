@@ -6,7 +6,7 @@
 /*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:43:09 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/17 16:43:16 by htekeste         ###   ########.fr       */
+/*   Updated: 2023/01/20 15:21:24 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		return ;
 	while (lst)
 	{
-		f(lst -> content);
+		(*f)(lst -> content);
 		lst = lst -> next;
 	}
 }

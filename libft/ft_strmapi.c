@@ -6,7 +6,7 @@
 /*   By: htekeste <htekeste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 05:52:54 by htekeste          #+#    #+#             */
-/*   Updated: 2023/01/17 16:50:26 by htekeste         ###   ########.fr       */
+/*   Updated: 2023/01/20 15:17:50 by htekeste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 		return (NULL);
 	while (s[i])
 	{
-		result[i] = f(i, s[i]);
+		result[i] = (*f)(i, s[i]);
 		i++ ;
 	}
 	result[i] = '\0';
