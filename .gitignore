@@ -4,5 +4,6 @@ libft-unit-test/
 libft-unit-test-master/
 libft-war-machine/
 libft-war-machine-master/
+printf/libft
 .vscode
 *.o
